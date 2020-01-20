@@ -1,0 +1,11 @@
+body{
+background-color:lightblue;
+    font-family: sans-serif;
+}
+#square{
+    width:150px;
+    height:150px;
+    background-color: red;
+    display: none;
+    position:relative; 
+}
