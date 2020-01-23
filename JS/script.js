@@ -1,4 +1,6 @@
 var start = new Date().getTime();  // calcolo il tempo iniziale
+
+var arrayTime = []; // mi creo un array vuoto per i tempi.
     
 function getRandomColor() { // funzione di colore random
     var letters = '0123456789ABCDEF';
@@ -41,6 +43,35 @@ document.getElementById("square").onclick = function() {
     var end = new Date().getTime();  // calcolo il tempo finale
     var time = (end - start)/1000;  // differenza tra il tempo iniziale e quello finale diviso per mille 
     // cosi ottengo il tempo in secondi..dato che di default è in millisecondi
-    document.getElementById("TimeTaken").innerHTML=time+" sec";    
+
+    arrayTime.push(time); // aggiungo il tempo ottenuto all'array
+
+    var min = 10000;
+    var max = 0;
+    var count = arrayTime.length;
+    var sumTime = 0;
+
+    for(i=0; i<arrayTime.length; i++){
+
+        for(j=0; j<arrayTime[i]; j++){
+            sumTime +=arrayTime[i];
+            if (arrayTime[i]>max){
+                max = arrayTime[i]
+            }
+            if (arrayTime[i]<min){
+                min = arrayTime[i]
+            }
+        }
+    }
+
+    if(count>0){
+    var avg = (sumTime/count).toFixed(3);
+    }
+
+    document.getElementById("TimeTaken").innerHTML=time+" sec"; 
+    document.getElementById("TimeAvgTaken").innerHTML=avg+" sec";
+    document.getElementById("TimeMaxTaken").innerHTML=max+" sec"; 
+    document.getElementById("TimeMinTaken").innerHTML=min+" sec";  
+    document.getElementById("Count").innerHTML=count;  
     appearAfterDelay(); // mi richiamo la funzione
 }
