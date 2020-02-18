@@ -2,10 +2,24 @@ body{
 background-color:lightblue;
     font-family: sans-serif;
 }
+
 #square{
     width:150px;
     height:150px;
     background-color: red;
-    display: none;
     position:relative; 
+    left:50%;
+}
+
+.main{
+    text-align: center;
+}
+.item{
+    border: 2px solid blue;
+    padding: 10px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: stretch;
 }

@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Reaction Tester</title>  
-        <link href="CSS/style.css" rel="stylesheet" type="text/css">    
-    </head>   
-    <body>  
+
+<head>
+    <title>Reaction Tester</title>
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="main">
         <h1>Test Your Reactions !</h1>
         <p>Click on the boxes and circle as quickly as you can !</p>
-        <h3>Your last time: <span id="TimeTaken"></span></h3>
-        <h3>Your average time: <span id="TimeAvgTaken"></span></h3>
-        <h3>Your max time: <span id="TimeMaxTaken"></span></h3>
-        <h3>Your best time: <span id="TimeMinTaken"></span></h3>
-        <h3>Your clicks: <span id="Count"></span></h3>
-        <div id="square">
-        </div>
-        <script type="text/javascript" src="JS/script.js"></script>
-    </body>
+    </div>
+    <div id="item" class="flex-container">
+        <h3 class="item" style="flex-grow: 2">Your last time: <span id="TimeTaken"></span></h3>
+        <h3 class="item" style="flex-grow: 2">Your average time: <span id="TimeAvgTaken"></span></h3>
+        <h3 class="item" style="flex-grow: 2">Your max time: <span id="TimeMaxTaken"></span></h3>
+        <h3 class="item" style="flex-grow: 2">Your best time: <span id="TimeMinTaken"></span></h3>
+        <h3 class="item" style="flex-grow: 2">Your clicks: <span id="Count"></span></h3>
+    </div>
+    <div id="square">
+    </div>
+    <script type="text/javascript" src="JS/script.js"></script>
+</body>
+
 </html>
